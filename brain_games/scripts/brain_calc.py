@@ -4,7 +4,7 @@ import brain_games.games.game
 
 
 def main():
-    brain_games.games.game.welcome(game='even')
+    brain_games.games.game.welcome(game='calc')
 
 
 if __name__ == '__main__':
