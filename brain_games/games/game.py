@@ -12,6 +12,8 @@ def welcome(game):
     print(f'Hello, {name}!\n{welcome}')
     if game_engine(game):
         print(f'Congratulations, {name}!')
+    else:
+        print(f'Let\'s try again, {name}!')
 
 
 def game_engine(game):
@@ -23,12 +25,13 @@ def game_engine(game):
             case 'calc':
                 (question, true_answer) = calc()
         print(f'Question: {question}')
-        user_answer = prompt.string('Your answer:')
+        user_answer = prompt.string('Your answer: ')
         if user_answer == true_answer:
             print('Correct!')
             i += 1
         else:
             print(f'\'{user_answer}\' is wrong answer ;(. Correct answer was \'{true_answer}\'')
+            return False
             i = 0
         if i == 3:
             return True
