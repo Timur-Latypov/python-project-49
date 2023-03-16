@@ -10,6 +10,8 @@ def welcome(game):
             welcome = "What is the result of the expression? "
         case "gcd":
             welcome = "Find the greatest common divisor of given numbers."
+        case "progression":
+            welcome = "What number is missing in the progression?"
     name = prompt.string("Welcome to the Brain Games!\nMay I have your name? ")
     print(f"Hello, {name}!\n{welcome}")
     if game_engine(game):
@@ -28,6 +30,8 @@ def game_engine(game):
                 (question, true_answer) = calc()
             case "gcd":
                 (question, true_answer) = gcd()
+            case "progression":
+                (question, true_answer) = progression()    
         print(f"Question: {question}")
         user_answer = prompt.string("Your answer: ")
         if user_answer == true_answer:
@@ -80,3 +84,25 @@ def gcd():
             b = b - a
     true_answer = str(a)
     return (question, true_answer)
+
+
+def progression():
+    arithmetic_progression_lenght = random.randrange(5, 15)
+    hidden_position =  random.randrange(arithmetic_progression_lenght)
+    step = random.randrange(2, 9)
+    start = random.randrange(30)
+    arithmetic_progression = []
+    for i in range(arithmetic_progression_lenght): 
+        arithmetic_progression.append(start)
+        start += step
+    true_answer = str(arithmetic_progression[hidden_position])
+    arithmetic_progression[hidden_position] = '..'
+    question = ''
+    for i in arithmetic_progression: question += f'{i} '
+    return (question, true_answer)
+
+
+
+
+    
+
