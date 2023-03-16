@@ -12,6 +12,8 @@ def welcome(game):
             welcome = "Find the greatest common divisor of given numbers."
         case "progression":
             welcome = "What number is missing in the progression?"
+        case "prime":
+            welcome = "Answer \"yes\" if given number is prime. Otherwise answer \"no\"."
     name = prompt.string("Welcome to the Brain Games!\nMay I have your name? ")
     print(f"Hello, {name}!\n{welcome}")
     if game_engine(game):
@@ -31,7 +33,9 @@ def game_engine(game):
             case "gcd":
                 (question, true_answer) = gcd()
             case "progression":
-                (question, true_answer) = progression()    
+                (question, true_answer) = progression()
+            case "prime":
+                (question, true_answer) = prime()
         print(f"Question: {question}")
         user_answer = prompt.string("Your answer: ")
         if user_answer == true_answer:
@@ -88,21 +92,24 @@ def gcd():
 
 def progression():
     arithmetic_progression_lenght = random.randrange(5, 15)
-    hidden_position =  random.randrange(arithmetic_progression_lenght)
+    hidden_position = random.randrange(arithmetic_progression_lenght)
     step = random.randrange(2, 9)
     start = random.randrange(30)
     arithmetic_progression = []
-    for i in range(arithmetic_progression_lenght): 
+    for i in range(arithmetic_progression_lenght):
         arithmetic_progression.append(start)
         start += step
     true_answer = str(arithmetic_progression[hidden_position])
     arithmetic_progression[hidden_position] = '..'
     question = ''
-    for i in arithmetic_progression: question += f'{i} '
+    for i in arithmetic_progression:
+        question += f'{i} '
     return (question, true_answer)
 
 
-
-
-    
-
+def prime():
+    question = random.randrange(3, 30)
+    for i in range(2, question):
+        if question % i == 0:
+            return (question, "no")
+    return (question, "yes")
