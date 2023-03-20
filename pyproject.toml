@@ -1,10 +1,12 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Brain-games contain 5 mini math game"
 authors = ["Timur Latypov <350250431@mail.ru>"]
 readme = "README.md"
 packages = [{include = "brain_games"}]
+repository = "https://github.com/Timur-Latypov/python-project-49.git"
+classifiers = ["Private :: Do Not Upload"]
 
 [tool.poetry.dependencies]
 python = "^3.10"

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-import brain_games.games.game
+import brain_games.game
 
 
 def main():
-    brain_games.games.game.welcome(game='even')
+    brain_games.game.welcome(game='even')
 
 
 if __name__ == '__main__':
