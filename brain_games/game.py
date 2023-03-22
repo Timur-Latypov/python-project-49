@@ -23,7 +23,7 @@ def welcome(game):
     if game_engine(game):
         print(f"Congratulations, {name}!")
     else:
-        print(f"Let\'s try again, {name}!'")
+        print(f"Let\'s try again, {name}!")
 
 
 def game_engine(game):
