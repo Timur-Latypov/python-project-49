@@ -2,8 +2,8 @@ import random
 
 
 def gcd():
-    a = random.randrange(30)
-    b = random.randrange(30)
+    a = random.randrange(5, 30)
+    b = random.randrange(5, 60)
     question = f'{a} {b}'
     # find gcd
     while a != b:
