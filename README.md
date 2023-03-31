@@ -42,6 +42,7 @@ brain-prime
 
 ### brain-even asciinema
 ### https://asciinema.org/a/51yiVuIEjtYjoduVjz63QpmLM
+[![asciicast](https://asciinema.org/a/51yiVuIEjtYjoduVjz63QpmLM.svg)](https://asciinema.org/a/51yiVuIEjtYjoduVjz63QpmLM)
 
 ### brain-calc asciinema
 ### https://asciinema.org/a/8xkFOINm3lL5GF7CSlIdSOrLW
