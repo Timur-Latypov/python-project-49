@@ -1,7 +1,11 @@
 import random
 
 
-def prime():
+def task():
+    return "Answer \"yes\" if given number is prime. Otherwise answer \"no\"."
+
+
+def game_engine():
     question = random.randrange(3, 30)
     for i in range(2, question):
         if question % i == 0:

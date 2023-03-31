@@ -4,7 +4,7 @@ import brain_games.game
 
 
 def main():
-    brain_games.game.welcome(game='progression')
+    brain_games.game.start_game(brain_games.games.progression)
 
 
 if __name__ == '__main__':

@@ -1,7 +1,11 @@
 import random
 
 
-def gcd():
+def task():
+    return "Find the greatest common divisor of given numbers."
+
+
+def game_engine():
     a = random.randrange(5, 30)
     b = random.randrange(5, 60)
     question = f'{a} {b}'
