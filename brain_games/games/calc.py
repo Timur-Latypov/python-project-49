@@ -1,7 +1,11 @@
 import random
 
 
-def calc():
+def task():
+    return "What is the result of the expression?"
+
+
+def game_engine():
     a = random.randrange(10)
     b = random.randrange(10)
     operation = random.choice('+*-')

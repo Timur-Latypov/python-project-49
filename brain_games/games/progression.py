@@ -1,7 +1,11 @@
 import random
 
 
-def progression():
+def task():
+    return "What number is missing in the progression?"
+
+
+def game_engine():
     arithmetic_progression_lenght = random.randrange(5, 15)
     hidden_position = random.randrange(arithmetic_progression_lenght)
     step = random.randrange(2, 9)
