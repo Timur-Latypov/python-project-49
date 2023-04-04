@@ -1,9 +1,4 @@
 import prompt
-import brain_games.games.even
-import brain_games.games.calc
-import brain_games.games.gcd
-import brain_games.games.progression
-import brain_games.games.prime
 
 
 def start_game(game_name):
