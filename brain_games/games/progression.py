@@ -1,22 +1,32 @@
 import random
 
 
-def task():
-    return "What number is missing in the progression?"
+RANGE = 100
+BEGIN = 2
+END = 20
+GAME_TASK = "What number is missing in the progression?"
 
 
-def game_engine():
-    arithmetic_progression_lenght = random.randrange(5, 15)
-    hidden_position = random.randrange(arithmetic_progression_lenght)
-    step = random.randrange(2, 9)
-    start = random.randrange(30)
-    arithmetic_progression = []
-    for i in range(arithmetic_progression_lenght):
-        arithmetic_progression.append(start)
-        start += step
-    true_answer = str(arithmetic_progression[hidden_position])
-    arithmetic_progression[hidden_position] = '..'
-    question = ''
-    for i in arithmetic_progression:
-        question += f'{i} '
+def make_question_and_true_answer():
+    progression_begin = random.randrange(RANGE)
+    progression_step = random.randrange(BEGIN, END)
+    progression_lenght = random.randrange(BEGIN, END)
+    hidden_position = random.randrange(progression_lenght)
+    progression = create_progression(progression_begin, progression_step, progression_lenght)
+    true_answer = str(progression[hidden_position])
+    progression[hidden_position] = '..'
+    question = make_question(progression)
     return (question, true_answer)
+
+
+def create_progression(start, step, lenght):
+    result = []
+    for i in range(lenght):
+        result.append(start)
+        start += step
+    return result
+
+
+def make_question(progression):
+    return ''.join(str(progression))
+

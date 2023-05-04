@@ -1,20 +1,20 @@
 import random
 
 
-def task():
-    return "What is the result of the expression?"
+RANGE = 10
+GAME_TASK = "What is the result of the expression?"
 
 
-def game_engine():
-    a = random.randrange(10)
-    b = random.randrange(10)
+def make_question_and_true_answer():
+    a = random.randrange(RANGE)
+    b = random.randrange(RANGE)
     operation = random.choice('+*-')
-    true_answer = str(random_operation(a, b, operation))
+    true_answer = str(result_calculation(a, b, operation))
     question = f'{a} {operation} {b}'
     return (question, true_answer)
 
 
-def random_operation(a, b, operation):
+def result_calculation(a, b, operation):
     match operation:
         case '*':
             return a * b
