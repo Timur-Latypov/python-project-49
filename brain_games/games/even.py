@@ -15,4 +15,3 @@ def make_question_and_true_answer():
 
 def is_even(number):
     return number % 2 == 0
-
