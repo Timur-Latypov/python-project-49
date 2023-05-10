@@ -22,18 +22,10 @@ def make_question_and_true_answer():
 def create_progression(progression_begin, progression_step, progression_lenght):
     result = []
     for i in range(progression_lenght):
-<<<<<<< HEAD
         result.append(str(progression_begin))
-=======
-        result.append(progression_begin)
->>>>>>> 72949cb4c1e54e5a688886d688323aecd9f84232
         progression_begin += progression_step
     return result
 
 
 def make_question(progression):
-<<<<<<< HEAD
     return ', '.join(progression)
-=======
-    return ''.join(str(progression))
->>>>>>> 72949cb4c1e54e5a688886d688323aecd9f84232
