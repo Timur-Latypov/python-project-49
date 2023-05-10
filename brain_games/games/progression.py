@@ -14,7 +14,7 @@ def make_question_and_true_answer():
     hidden_position = random.randrange(lenght)
     progression = create_progression(begin, step, lenght)
     true_answer = str(progression[hidden_position])
-    progression[hidden_position] = "\'..\'"
+    progression[hidden_position] = '..'
     question = make_question(progression)
     return (question, true_answer)
 
@@ -28,4 +28,4 @@ def create_progression(progression_begin, progression_step, progression_lenght):
 
 
 def make_question(progression):
-    return ', '.join(progression)
+    return ' '.join(progression)
