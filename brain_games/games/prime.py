@@ -3,7 +3,7 @@ import random
 
 FIRST_PRIME = 2
 RANGE = 30
-GAME_TASK = "Answer \"yes\" if given number is prime. Otherwise answer \"no\"."
+TASK = "Answer \"yes\" if given number is prime. Otherwise answer \"no\"."
 
 
 def make_question_and_true_answer():
